@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/WebContent/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/WebContent" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
+        </fileset>
+        <fileset id="fileset2" name="Spring Application Context (2)" removed="false">
+          <file>file://$MODULE_DIR$/src/applicationContext-mvc.xml</file>
+          <file>file://$MODULE_DIR$/bin/src/applicationContext-mvc.xml</file>
+          <file>file://$MODULE_DIR$/bin/src/applicationContext-shiro.xml</file>
+          <file>file://$MODULE_DIR$/src/applicationContext-shiro.xml</file>
+          <file>file://$MODULE_DIR$/src/applicationContext.xml</file>
+          <file>file://$MODULE_DIR$/bin/src/applicationContext.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
+</module>

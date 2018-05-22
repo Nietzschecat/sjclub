@@ -1,0 +1,116 @@
+@charset "utf-8";
+
+/*
+ * Copyright 2005-2015 shopxx.net. All rights reserved.
+ * Support: http://www.shopxx.net
+ * License: http://www.shopxx.net/license
+ * 
+ * Style - Login
+ * Version: 4.0
+ */
+
+/* ---------- Login ---------- */
+#img_bg{
+    width:100% ;
+    height: 100%;
+    position: absolute;
+    z-index: -10;
+    background: url(../images/login_bg.jpg) 0px 0px no-repeat;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+body{
+    overflow: hidden;
+}
+.login {
+	width: 520px;
+	height: 302px;
+	overflow: hidden;
+    position:absolute;
+    top: 40%;
+    left: 50%;
+}
+
+.login table {
+	width: 520px;
+	height: 220px;
+	color: #ffffff;
+}
+
+.login th {
+	height: 30px;
+	padding-right: 6px;
+	font-weight: normal;
+	text-align: right;
+}
+
+.login .captcha {
+	width: 120px;
+	text-transform: uppercase;
+	ime-mode: disabled;
+}
+
+.login .captchaImage {
+	margin-left: 10px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+.login .homeButton {
+	width: 37px;
+	height: 30px;
+	line-height: 30px;
+	cursor: pointer;
+	outline: none;
+	blr: expression(this.hideFocus = true);
+	border: none;
+	background: url(../images/login.png) 0px -420px no-repeat;
+}
+
+.login .loginButton {
+	width: 70px;
+	height: 30px;
+	line-height: 30px;
+	color: #476b89;
+	cursor: pointer;
+	outline: none;
+	blr: expression(this.hideFocus = true);
+	border: none;
+	background: url(../images/login.png) -37px -420px no-repeat;
+}
+
+.login .powered {
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	font-size: 9px;
+	color: #FFFFFF;
+}
+
+.login .link {
+	height: 30px;
+	line-height: 30px;
+	padding-right: 7px;
+	text-align: right;
+	color: #888888;
+}
+
+.login .link a {
+	color: #888888;
+	margin: 0px 3px;
+}
+
+fieldset {
+	line-height: 30px;
+	padding: 0px 10px;
+	margin: 10px 20px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	border: 1px solid #cccccc;
+}
+
+fieldset strong {
+	font-weight: bold;
+}

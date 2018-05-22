@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd"
+	default-lazy-init="true">
+
+	<bean id="shiroFilter" class="org.apache.shiro.spring.web.ShiroFilterFactoryBean">
+	
+		<property name="securityManager" ref="securityManager" />
+		<property name="loginUrl" value="/admin/login.jhtml" />
+		<property name="successUrl" value="/sjclub/index.jhtml" />
+		<property name="unauthorizedUrl" value="/admin/common/unauthorized.jhtml" />
+		<property name="filterChainDefinitionMap">
+			<map>
+				<entry key="/admin/" value="anon" />
+				<entry key="/admin/index.jsp" value="anon" />
+				<entry key="/admin/login.jhtml" value="authc" />
+				<entry key="/admin/logout.jhtml" value="logout" />
+				<entry key="/admin/common/captcha.jhtml" value="anon" />
+
+				<entry key="/admin/log/**" value="perms[admin:log]" />
+				<entry key="/admin/**" value="authc" />
+			</map>
+		</property>
+		<property name="filters">
+			<map>
+				<!-- login -->
+				<entry key="authc" value-ref="authenticationFilter" />
+				<!-- roles -->
+				<!-- logout -->
+			</map>
+		</property>
+	</bean>
+
+	<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">
+		<property name="realm" ref="authenticationRealm" />
+		<property name="cacheManager" ref="shiroCacheManager" />
+	</bean>
+
+	<bean id="authenticationRealm" class="com.huitu.sjclub.AuthenticationRealm">
+		<property name="authorizationCacheName" value="authorization" />
+	</bean>
+
+	<bean id="shiroCacheManager" class="org.apache.shiro.cache.ehcache.EhCacheManager">
+		<property name="cacheManager" ref="ehCacheManager" />
+	</bean>
+
+	<bean id="authenticationFilter" class="com.huitu.sjclub.filter.AuthenticationFilter" />
+
+	<bean class="org.springframework.beans.factory.config.MethodInvokingFactoryBean">
+		<property name="staticMethod" value="org.apache.shiro.SecurityUtils.setSecurityManager" />
+		<property name="arguments" ref="securityManager" />
+	</bean>
+	
+
+	<!-- <bean id="lifecycleBeanPostProcessor" class="org.apache.shiro.spring.LifecycleBeanPostProcessor"/>
+
+
+    <bean class="org.springframework.aop.framework.autoproxy.DefaultAdvisorAutoProxyCreator" depends-on="lifecycleBeanPostProcessor">
+        <property name="proxyTargetClass" value="true" />
+    </bean>
+
+
+    <bean class="org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor">
+        <property name="securityManager" ref="securityManager"/>
+    </bean> -->
+    
+    
+   <!--  <bean class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">
+        <property name="exceptionMappings">
+            <props>
+                登录
+                <prop key="org.apache.shiro.authz.UnauthenticatedException">
+                    redirect:/login
+                </prop>
+                授权
+                <prop key="org.apache.shiro.authz.UnauthorizedException">
+                    redirect:/admin/common/exceptionLog
+                </prop>
+            </props>
+        </property>
+        <property name="defaultErrorView" value="error/genericView"/>
+    </bean> -->
+	
+
+</beans>

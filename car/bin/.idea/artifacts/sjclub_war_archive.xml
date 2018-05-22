@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="sjclub:war archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/sjclub_war_archive</output-path>
+    <root id="archive" name="sjclub_war archive.war">
+      <element id="artifact" artifact-name="sjclub:war" />
+    </root>
+  </artifact>
+</component>

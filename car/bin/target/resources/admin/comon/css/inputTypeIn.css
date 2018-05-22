@@ -1,0 +1,219 @@
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {margin:0;padding:0;}
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6, pre, code,
+form, fieldset, legend, input, button,
+textarea, p, blockquote, th, td {margin:0;padding:0;}
+fieldset, img {border:none;}
+img {vertical-align:top;}
+:focus {outline:0;}
+address, caption, cite, code, dfn,
+em, th, var, optgroup {font-style:normal;font-weight:normal !important;}
+h1, h2, h3, h4, h5, h6 {font-size:100%;font-weight:normal;}
+abbr, acronym {border:none;font-variant:normal;}
+button:hover {cursor:pointer;}
+input, button, textarea,
+select, optgroup, option {font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;}
+code, kbd, samp, tt {font-size: 100%;}
+input, button, textarea, select {font-size:inherit;outline:none;}
+button {border:none;}
+ol, ul {list-style: none;}
+table{border-collapse:collapse;border-spacing:0;table-layout:fixed;word-wrap:break-word;}
+caption, th{text-align:center;}
+sup, sub {font-size: 100%;vertical-align: baseline;}
+:link, :visited , ins {text-decoration: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+button,a{/*transition:color .2s;*/color:inherit;}
+body {color:#333;min-width:1000px;}
+input {color:#999;}
+input:focus {color:#333;}
+body {font-size:20px;font-family:"Microsoft YaHei",simhei;line-height:1.5;}
+
+.container {margin:auto;width:100%;}
+table {
+    border-collapse: collapse;
+    border: solid #666 1px;
+    width:100%;
+    margin:0 0 30px 0;
+}
+tr {border: solid #ddd 1px;}
+th {
+    border:#ddd solid 1px;
+    background:#eee;
+}
+td {
+    border: solid #ddd 1px;
+    padding:5px;
+    line-height:1.5;
+}
+.space {white-space:nowrap;}
+.text-center {
+    text-align:center;
+}
+h1 {
+    font-size:25px;
+
+}
+.tr .text {
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+.text {
+    border:none;
+    border-bottom:#eee solid 1px;
+
+
+}
+.dates span {
+    display:inline-block;
+}
+.text {
+    width:100px;
+}
+.s {overflow:hidden;}
+.c {
+    float:left;
+    margin:0 18px 0 0;
+}
+.checkbox {
+    margin:0 10px 0 0;
+}
+.tr td{
+    margin:0px;
+    padding: 0px;
+}
+
+/* ---------- Message ---------- */
+
+.xxMessage {
+    padding: 10px 30px;
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 25%;
+    _top: expression(documentElement.scrollTop + Math.round(documentElement.offsetHeight * 0.25));
+    left: 50%;
+    z-index: 100;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 1px 6px #999999;
+    -moz-box-shadow: 1px 1px 6px #999999;
+    box-shadow: 1px 1px 6px #999999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=0, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=90, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=180, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=270, strength=3)";
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=0, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=90, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=180, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=270, strength=3);
+    border: 1px solid #999999;
+    background-color: #ffffff;
+}
+
+.xxMessage .messageContent {
+    line-height: 24px;
+    padding: 0px 10px 0px 30px;
+    color: #666666;
+}
+
+.xxMessage .messagewarnIcon {
+    background: url(../images/common.gif) -60px -360px no-repeat;
+}
+
+.xxMessage .messagesuccessIcon {
+    background: url(../images/common.gif) -30px -390px no-repeat;
+}
+
+.xxMessage .messageerrorIcon {
+    background: url(../images/common.gif) 0px -420px no-repeat;
+}
+
+.xxMessage .messageIframe {
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    z-index: -10;
+}
+
+/* ---------- Dialog ---------- */
+
+.xxDialog {
+    display: none;
+    position: fixed;
+    _position: absolute;
+    top: 25%;
+    _top: expression(documentElement.scrollTop + Math.round(documentElement.offsetHeight * 0.25));
+    left: 50%;
+    z-index: 90;
+    overflow: hidden;
+    -webkit-box-shadow: 1px 1px 6px #999999;
+    -moz-box-shadow: 1px 1px 6px #999999;
+    box-shadow: 1px 1px 6px #999999;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=0, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=90, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=180, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=270, strength=3)";
+    filter: progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=0, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=90, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#d4d4d4, direction=180, strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#e5e5e5, direction=270, strength=3);
+    *filter: none;
+    border: 1px solid #779cb0;
+    background: url(../images/common.gif) 0px -660px repeat-x #ffffff;
+}
+
+.xxDialog .dialogTitle {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    color: #666666;
+    font-weight: bold;
+    cursor: move;
+    background: url(../images/common.gif) 0px -210px repeat-x;
+}
+
+.xxDialog .dialogClose {
+    width: 25px;
+    height: 19px;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    cursor: pointer;
+    background: url(../images/common.gif) 0px -330px no-repeat;
+}
+
+.xxDialog .dialogClose:hover {
+    background-position: -30px -330px;
+}
+
+.xxDialog .dialogwarnIcon {
+    line-height: 24px;
+    padding-left: 30px;
+    margin: 50px 0px 40px 60px;
+    background: url(../images/common.gif) -60px -360px no-repeat;
+}
+
+.xxDialog .dialogsuccessIcon {
+    line-height: 24px;
+    padding-left: 30px;
+    margin: 50px 0px 40px 60px;
+    background: url(../images/common.gif) -30px -390px no-repeat;
+}
+
+.xxDialog .dialogerrorIcon {
+    line-height: 24px;
+    padding-left: 30px;
+    margin: 50px 0px 40px 60px;
+    background: url(../images/common.gif) 0px -420px no-repeat;
+}
+
+.xxDialog .dialogBottom {
+    height: 34px;
+    padding-top: 6px;
+    text-align: center;
+    background: url(../images/common.gif) 0px -270px repeat-x #ffffff;
+}
+
+.xxDialog .dialogIframe {
+    width: 2000px;
+    height: 2000px;
+    position: absolute;
+    left: -100px;
+    top: -100px;
+    z-index: -10;
+}
